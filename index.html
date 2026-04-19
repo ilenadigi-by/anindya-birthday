@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph WhatsApp Preview -->
+  
   <meta property="og:title" content="Undangan Birthday Anindya">
   <meta property="og:description" content="Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di hari  ulang tahun Anindya.">
   <meta property="og:image" content="https://anindya-birthday.by-ilenadigi.my.id/CoverWA.jpg">
@@ -20,7 +20,7 @@ html.lock,body.lock{overflow:hidden;height:100%}
 body {
   background-image: url('Bg.jpg');
   background-position: center;
-  background-size: cover;   /* atau contain */
+  background-size: cover;   
   background-repeat: no-repeat;
   color: #fff;
   font-family: 'Lora', serif;
@@ -29,11 +29,11 @@ body {
 /* COVER */
 #cover{
   width: 100%;
-  max-width: 420px;          /* kunci tampilan portrait */
-  min-height: 100vh;         /* full tinggi layar */
+  max-width: 420px;          
+  min-height: 100vh;         
   margin: 0 auto;
 
-  background: url('Cover.jpg') center / cover no-repeat; /* <<< PENTING */
+  background: url('Cover.jpg') center / cover no-repeat; 
 
   display: flex;
   flex-direction: column;
@@ -45,8 +45,8 @@ body {
 }
 #cover{
   width: 100%;
-  max-width: 420px;          /* kunci tampilan portrait */
-  min-height: 100vh;         /* full tinggi layar */
+  max-width: 420px;          
+  min-height: 100vh;         
   margin: 0 auto;
 
   background: url('Cover.jpg') center / cover no-repeat;
@@ -60,14 +60,12 @@ body {
   padding: 0 20px 120px 20px;
 }
 
-/* ===== COVER RESPONSIVE KHUSUS ===== */
 
-/* Default HP portrait tetap full */
 #cover {
   aspect-ratio: auto;
 }
 
-/* Tablet portrait */
+
 @media (min-width: 600px) and (orientation: portrait) {
   #cover {
     max-width: 600px;
@@ -76,10 +74,10 @@ body {
   }
 }
 
-/* Semua device kalau LANDSCAPE */
+
 @media (orientation: landscape) {
   #cover {
-    aspect-ratio: 9/16;   /* paksa tetap bentuk undangan */
+    aspect-ratio: 9/16;   
     height: 100vh;
     max-height: 100vh;
   }
@@ -88,7 +86,7 @@ body {
   display: flex;
   gap: 8px;
   justify-content: center;
-  margin-bottom: 12px; /* jarak countdown ke nama */
+  margin-bottom: 12px; 
 }
 
 .cd-box {
@@ -103,7 +101,7 @@ body {
 }
 
 .cover-footer {
-  margin-bottom: 20px; /* tombol buka undangan sedikit jarak dari bawah */
+  margin-bottom: 20px; 
 }
 
 .kepada {
@@ -130,7 +128,7 @@ body {
   cursor: pointer;
 }
 
-/* MUSIC */
+
 #musicBtn{
   position:fixed;
   top:20px;right:20px;
@@ -148,17 +146,17 @@ body {
 #musicBtn.playing{animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* SECTION */
+
 section{
   width: 100%;
-  max-width: 414px;       /* lebar maksimum sesuai HP */
+  max-width: 414px;       
   aspect-ratio: 9/16;
-  min-height: 100%;      /* selalu setinggi layar HP */
+  min-height: 100%;      
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;  /* ubah dari contain menjadi cover */
+  background-size: cover;  
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -206,7 +204,7 @@ section.show{opacity:1;transform:none}
 }
 #galeri .slider img.active{opacity:1}
 
-/* THUMBNAILS (optional) */
+
 #galeri .thumbnails{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -258,7 +256,7 @@ section.show{opacity:1;transform:none}
 
 
 
-/* RSVP */
+
 #rsvp {
   flex-direction: column;
   display: flex;
@@ -277,7 +275,7 @@ section.show{opacity:1;transform:none}
   display: flex;
   flex-direction: column;
   gap: 4px;
-  align-items: center; /* tombol center */
+  align-items: center; 
 }
 
 #rsvp input, #rsvp select, #rsvp textarea {
@@ -308,11 +306,11 @@ section.show{opacity:1;transform:none}
   transform: scale(1.05);
 }
 
-/* Daftar RSVP realtime */
+
 #rsvpListWrapper {
   width: 100%;
   max-width: 360px;
-  max-height: 360px; /* scrollable */
+  max-height: 360px; 
   overflow-y: auto;
   margin-top: 12px;
   padding-right: 6px;
@@ -350,10 +348,10 @@ section.show{opacity:1;transform:none}
   margin-bottom: 4px;
   display: block;
 }
-/* WATERMARK */
+
 .watermark{
   position:absolute;
-  bottom:80px; /* lebih atas supaya tidak ketutup nav */
+  bottom:80px; 
   left:50%;
   transform:translateX(-50%);
   letter-spacing:3px;
@@ -376,7 +374,7 @@ section{
 </head>
 <body class="lock">
 
-<!-- COVER -->
+
 <section id="cover" class="show">
   <div id="coverCountdown">
     <div class="cd-box" id="cd-days">00</div>
@@ -392,7 +390,7 @@ section{
 <audio id="music" src="music.mp3" loop></audio>
 <div id="musicBtn" onclick="toggleMusic()">♪</div>
 
-<!-- SECTIONS -->
+
 <section id="tanggal">
   <video class="motion-bg" muted loop playsinline preload="none">
     <source src="Tanggal.mp4" type="video/mp4">
@@ -406,7 +404,6 @@ section{
 </section>
 
 
-<!-- GALERI -->
 <section id="galeri">
   <video class="motion-bg" muted loop playsinline preload="none">
     <source src="Gallery.mp4" type="video/mp4">
@@ -433,7 +430,7 @@ section{
   </div>
 </section>
 
-<!-- TEMPLATE -->
+
 <section>
   <video class="motion-bg" muted loop playsinline preload="none">
     <source src="Template.mp4" type="video/mp4">
@@ -442,7 +439,7 @@ section{
 </section>
 
 </section>
-<!-- RSVP -->
+
 <section id="rsvp">
   <video class="motion-bg" muted loop playsinline preload="none">
     <source src="Rsvp.mp4" type="video/mp4">
@@ -464,7 +461,7 @@ section{
     <div id="listRsvp"></div>
   </div>
 </section>
-<!-- TERIMAKASIH -->
+
 <section style="position:relative">
   <video class="motion-bg" muted loop playsinline preload="none">
     <source src="Terimakasih.mp4" type="video/mp4">
@@ -472,7 +469,7 @@ section{
   <div class="watermark">ILENADIGI</div>
 </section>
 
-<!-- NAV -->
+
 <div id="nav">
   <div class="nav-item" onclick="go('tanggal')"><img src="Tanggal.svg"></div>
   <div class="nav-item" onclick="go('lokasi')"><img src="Lokasi.svg"></div>
@@ -481,7 +478,7 @@ section{
 </div>
 
 <script>
-/* AMBIL ELEMENT */
+
 const guest=document.getElementById("guest");
 const cover=document.getElementById("cover");
 const nav=document.getElementById("nav");
@@ -494,11 +491,11 @@ const cdHours=document.getElementById("cd-hours");
 const cdMinutes=document.getElementById("cd-minutes");
 const cdSeconds=document.getElementById("cd-seconds");
 
-/* NAMA TAMU */
+
 const q=new URLSearchParams(location.search);
 if(q.get("nama")) guest.innerText = q.get("nama");
 
-/* OPEN UNDANGAN */
+
 function openInvitation(){
   document.body.classList.remove("lock");
   cover.style.display="none";
@@ -509,7 +506,6 @@ function openInvitation(){
   reveal();
 }
 
-/* REVEAL SECTION ON SCROLL */
 function reveal(){
   document.querySelectorAll("section").forEach(s=>{
     if(s.getBoundingClientRect().top<innerHeight-100) s.classList.add("show");
@@ -517,17 +513,17 @@ function reveal(){
 }
 addEventListener("scroll",reveal);
 
-/* NAV */
+
 function go(id){
   document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
 
-/* MUSIC */
+
 function toggleMusic(){
   music.paused ? (music.play(),musicBtn.classList.add("playing")) : (music.pause(),musicBtn.classList.remove("playing"));
 }
 
-/* COUNTDOWN */
+
 const target=new Date("2026-05-01T09:30:00").getTime();
 setInterval(()=>{
   const diff=target-Date.now();
@@ -538,7 +534,7 @@ setInterval(()=>{
   cdSeconds.innerText=Math.floor(diff%60000/1000).toString().padStart(2,"0");
 },1000);
 
-/* GALERI AUTO SLIDE */
+
 let idx = 0;
 const slides = document.querySelectorAll("#galeri .slider img");
 
@@ -560,32 +556,32 @@ function setSlide(i){
   showSlide(i);
 }
 
-// auto slide tetap jalan
+
 setInterval(() => nextSlide(), 4000);
 
 
-/* RSVP POST & GET Realtime */
+
 document.addEventListener("DOMContentLoaded", () => {
   const rsvpForm = document.getElementById("rsvpForm");
   const listRsvp = document.getElementById("listRsvp");
   const scriptURL_POST = "https://script.google.com/macros/s/AKfycbzNAXFYW2yS06C_Axmql831PlwwTnref0-GVw0WnqIqUKcwEHYCoB3dq0ZOXdpb97jCqw/exec"; // Apps Script POST
   const scriptURL_GET  = "https://script.google.com/macros/s/AKfycbzNAXFYW2yS06C_Axmql831PlwwTnref0-GVw0WnqIqUKcwEHYCoB3dq0ZOXdpb97jCqw/exec";  // Apps Script GET (JSON)
 
-  // POST data
+  
   if(rsvpForm){
     rsvpForm.addEventListener("submit", e=>{
       e.preventDefault();
       const d = new FormData(rsvpForm);
       fetch(scriptURL_POST,{method:"POST",body:d})
         .then(()=> {
-          loadRSVP(); // refresh setelah submit
+          loadRSVP(); 
           rsvpForm.reset();
         })
         .catch(err=>console.error("Error RSVP:",err));
     });
   }
 
-  // GET data realtime
+  
   function loadRSVP(){
     fetch(scriptURL_GET)
       .then(res=>res.json())
